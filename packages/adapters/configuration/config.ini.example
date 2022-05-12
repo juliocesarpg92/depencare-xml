@@ -1,0 +1,30 @@
+[client]
+client_id = 
+client_secret = 
+
+[sdk]
+refresh_token = 
+current_user_email = david@depencare.com
+apibaseurl = https://www.zohoapis.eu
+apiversion = v2
+sandbox = False
+redirect_url = https://www.depencare.com
+accounts_url = https://accounts.zoho.eu
+access_type = offline
+token_persistence_path = /home/juliocesar/WORK/inversion_cooperacion/docs/Proyectos/DepenCare/XML-SEPE/python/packages/adapters/configuration/sdk/python_sdk_tokens.txt
+log_file_path = /home/juliocesar/WORK/inversion_cooperacion/docs/Proyectos/DepenCare/XML-SEPE/python/packages/adapters/configuration/sdk/logs/python_sdk_log.log
+resource_path = /home/juliocesar/WORK/inversion_cooperacion/docs/Proyectos/DepenCare/XML-SEPE/python/packages/adapters/configuration/sdk
+xml_path = /home/juliocesar/WORK/inversion_cooperacion/docs/Proyectos/DepenCare/XML-SEPE/python/packages/adapters/configuration/XMLs
+
+[creator]
+refresh_token = 
+access_token = 
+base_url = https://creator.zoho.eu/api/v2
+app_link_name = dc
+account_owner_name = dgonzalezprieto1
+form_link_name = Datos_agregados_mensual
+report_link_name = ${form_link_name}_Report
+refresh_url = https://accounts.zoho.eu/oauth/v2/token?refresh_token=${refresh_token}&client_id=${client:client_id}&client_secret=${client:client_secret}&grant_type=refresh_token
+report_url = ${base_url}/${account_owner_name}/${app_link_name}/report/${report_link_name}
+form_url = ${base_url}/${account_owner_name}/${app_link_name}/form/${form_link_name}
+
