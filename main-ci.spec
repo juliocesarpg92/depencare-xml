@@ -10,8 +10,6 @@ a = Analysis(['main.py'],
              datas=[
              ('venv/lib/python3.10/site-packages/zcrmsdk', 'zcrmsdk'),
              ('packages/adapters/configuration/sdk', 'sdk'),
-             ('packages/adapters/configuration/XMLs', 'XMLs'),
-             ('packages/adapters/configuration/config.ini', '.'),
              ('packages/adapters/configuration/config.ini.example', '.')
              ],
              hiddenimports=[],
