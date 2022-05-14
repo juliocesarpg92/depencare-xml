@@ -40,8 +40,10 @@ jobs:
       - name: Zip dist folder
         run: |
           tar -cvzf xml-sepe.zip dist
-      - name: Download zip
+      - name: Release
         uses: Xotl/cool-github-releases@v1
         with:
+          mode: update
+          tag_name: v1.0.0
           assets: xml-sepe.zip
           github_token: ${{ secrets.GITHUB_TOKEN }}
