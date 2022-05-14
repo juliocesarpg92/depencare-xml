@@ -42,9 +42,6 @@ jobs:
           tar -cvzf xml-sepe.zip dist
           ls -la
       - name: Release
-        uses: Xotl/cool-github-releases@v1
+        uses: softprops/action-gh-release@v1
         with:
-          mode: update
-          tag_name: v1.0.0
-#           assets: requirements.txt
-          github_token: ${{ github.token }}
+          files: xml-sepe.zip
