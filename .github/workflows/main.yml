@@ -46,4 +46,4 @@ jobs:
           mode: update
           tag_name: v1.0.0
           assets: xml-sepe.zip
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ github.token }}
