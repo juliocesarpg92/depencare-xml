@@ -12,6 +12,9 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+  
+permissions:
+  contents: write
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -37,3 +40,12 @@ jobs:
           cp -r $LD_LIBRARY_PATH/python3.10/site-packages/zcrmsdk venv/lib/python3.10/site-packages/zcrmsdk
       - name: Build
         run: pyinstaller main-ci.spec
+      - name: Zip dist folder
+        run: |
+          tar -cvzf xml-sepe.zip dist
+          ls -la
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: xml-sepe.zip
+          tag_name: v1.0.0
