@@ -68,6 +68,8 @@ def format_carer(carer):
         carer['Segundo_apellido_cuidador'] = carer['Segundo_apellido_cuidador'].lower() if carer['Segundo_apellido_cuidador'] else None
         carer['Segundo_apellido_cuidador'] = __format_lastnames(carer['Segundo_apellido_cuidador'])
 
+        if carer['DNI_NIE_Permiso_de_trabajo'] is None:
+            raise ValueError('el dni es nulo')
         carer['DNI_NIE_Permiso_de_trabajo'] = carer['DNI_NIE_Permiso_de_trabajo'].replace('-','')
         if len(carer['DNI_NIE_Permiso_de_trabajo']) != 9:
             raise ValueError('el dni debe tener exactamente 9 caracteres')
