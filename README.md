@@ -25,6 +25,7 @@ ZohoCRM.coql.READ,ZohoCRM.modules.READ
 1. download python installer from internet.
 2. select the option to include python inside system path (windows).
 3. open a cmd and type `pip -v` and `python` to be sure are installed.
+4. `sudo apt install python3-venv` (*required in Debian/Ubuntu*)
 
 ## start venv
 

@@ -110,11 +110,12 @@ class MonthlyInfo(AggregatedInfo):
 
 
 if __name__ == '__main__':
+    # from packages.adapters.zohoSDK.zoho_api_requests import ApiRequestRepository
     from packages.adapters.zohoSDK.zoho_api_requests import ApiRequestRepository
 
     repo = ApiRequestRepository()
-    start = date(2021, 8, 1)
-    end = date(2021, 8, 31)
+    start = date(2022, 7, 1)
+    end = date(2022, 7, 31)
     info = MonthlyInfo(start, end, repo)
 
     # print('Test new candidates')

@@ -32,7 +32,7 @@ def format_carer_service(carer_service):
     return carer_service
 
 
-def format_carer(carer):
+def format_carer(carer: dict):
     '''
     formatear fechas y eliminar objetos anidados
     :param carer:
@@ -80,11 +80,22 @@ def format_carer(carer):
         print(ex)
         raise
 
-def format_client(client):
-    client['cif_nif_empresa'] = client['Num_documento_Empleador']
-    client['razon_social_empresa'] = client['Nombre_y_Apellidos_empleador'] + ' ' + client[
-        'Apellidos_empleador'] + ' ' + client['Segundo_apellido_empleador']
-    return client
+# TODO: hacer un mecanismo para garantizar la corrección de los datos 
+def format_client(client: dict):
+    try:
+        client['cif_nif_empresa'] = client['Num_documento_Empleador']
+        client['razon_social_empresa'] = ' '.join(
+            [
+                client.get('Nombre_y_Apellidos_empleador') if client.get('Nombre_y_Apellidos_empleador') != None else '',
+                client.get('Apellidos_empleador') if client.get('Apellidos_empleador') != None else '',
+                client.get('Segundo_apellido_empleador') if client.get('Segundo_apellido_empleador') != None else ''
+            ])
+        
+        return client
+    except Exception as ex:
+        print(f'error en cliente {client}')
+        print(ex)
+        raise
 
 def __format_names(name_to_format):
     if name_to_format is not None:
