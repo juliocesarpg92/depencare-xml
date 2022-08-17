@@ -70,10 +70,7 @@ jobs:
       - name: Copy sdk
         run: |
           mkdir -p venv/lib/python3.10/site-packages/zcrmsdk
-          pip list -v
-          echo '${{ steps.py.outputs.python-path }}'
-          echo '${{ env.pythonLocation }}'
-          cp -r c:/usr/local/lib/python3.10/site-packages/zcrmsdk venv/lib/python3.10/site-packages/zcrmsdk
+          cp -r '${{ env.pythonLocation }}'/site-packages/zcrmsdk venv/lib/python3.10/site-packages/zcrmsdk
       - name: Build
         run: pyinstaller main-ci.spec
       - name: Zip dist folder
