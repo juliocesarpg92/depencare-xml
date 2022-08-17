@@ -61,8 +61,8 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
       - name: Install deps
-      - uses: actions/setup-python@v4.2
-        # id: py
+        uses: actions/setup-python@v4.2
+        id: py
         with:
           python-version: "3.10"
           cache: "pip"
@@ -72,7 +72,7 @@ jobs:
         run: |
           mkdir -p venv/lib/python3.10/site-packages/zcrmsdk
           pip list -v
-          # ${{ steps.py.outputs.python-path }}
+          ${{ steps.py.outputs.python-path }}
           cp -r c:/usr/local/lib/python3.10/site-packages/zcrmsdk venv/lib/python3.10/site-packages/zcrmsdk
       - name: Build
         run: pyinstaller main-ci.spec
