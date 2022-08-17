@@ -65,7 +65,7 @@ jobs:
         with:
           python-version: "3.10"
           cache: "pip"
-        run: |
+      - run: |
           pip install -r requirements.txt
       - name: Copy sdk
         run: |
