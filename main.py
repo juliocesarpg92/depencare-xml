@@ -19,5 +19,6 @@ if __name__ == '__main__':
     initialize_sdk()
     console()
     print('done')
+    input()
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
