@@ -17,7 +17,7 @@ permissions:
   contents: write
 
 env:
-  tag_name: v1.0.2 
+  tag_name: v1.0.3 
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
