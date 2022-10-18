@@ -8,7 +8,7 @@ a = Analysis(['main.py'],
              pathex=[],
              binaries=[],
              datas=[
-             ('venv/lib/python3.10/site-packages/zcrmsdk/*', 'zcrmsdk'),
+             ('venv/lib/python3.10/site-packages/zcrmsdk', 'zcrmsdk'),
              ('packages/adapters/configuration/sdk', 'sdk'),
              ('packages/adapters/configuration/XMLs', 'XMLs'),
              ('packages/adapters/configuration/config.ini', '.'),
