@@ -18,6 +18,42 @@ ZohoCreator.report.READ,ZohoCreator.form.CREATE,ZohoCreator.report.UPDATE,ZohoCr
 ZohoCRM.coql.READ,ZohoCRM.modules.READ
 ```
 
+# fields extracted from Zoho
+
+## module Cuidadores
+
+- Nombre
+- Apellidos
+- Segundo_apellido_cuidador
+- Fecha_de_Nacimiento
+- DNI_NIE_Permiso_de_trabajo
+- Indicador_recibe_prestaciones_desempleo
+- Indicador_discapacidad
+- Indicador_inmigrante
+- Indicador_colectivo_dificultades_insercion
+- Nivel_formativo
+- Sexo
+- Fecha_de_aceptacion
+
+## module Deals
+
+- Numero_de_cuidadores
+
+## module Historico_de_cuidadores
+
+- SC_Cliente_Empleador
+- Name
+- Codigo_tipo_contrato_cuidador
+- Cuidador
+- Fecha_inicio_actividad
+
+## module Contacts
+
+- Num_documento_Empleador
+- Nombre_y_Apellidos_empleador
+- Apellidos_empleador
+- Segundo_apellido_empleador
+
 # Installation
 
 ## install python and pip
