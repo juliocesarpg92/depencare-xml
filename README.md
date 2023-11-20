@@ -67,7 +67,8 @@ ZohoCRM.coql.READ,ZohoCRM.modules.READ
 
 1. open console.
 1. `python -m venv <nombrevenv>`
-1. `<nombrevenv>/bin/activate`
+1. `chmod ug+x venv/bin/activate` (linux)
+1. `source <nombrevenv>/bin/activate`
 1. `<nombrevenv>\Scripts\activate.bat` (windows)
 
 ## configure

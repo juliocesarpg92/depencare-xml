@@ -6,3 +6,4 @@ venv*
 *xml
 *zip
 config.ini
+**/*.log

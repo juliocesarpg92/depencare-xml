@@ -11,11 +11,11 @@ sandbox = False
 redirect_url = https://www.depencare.com
 accounts_url = https://accounts.zoho.eu
 access_type = offline
-token_persistence_path = /home/juliocesar/WORK/inversion_cooperacion/docs/Proyectos/DepenCare/XML-SEPE/python/packages/adapters/configuration/sdk/python_sdk_tokens.txt
-log_file_path = /home/juliocesar/WORK/inversion_cooperacion/docs/Proyectos/DepenCare/XML-SEPE/python/packages/adapters/configuration/sdk/logs/python_sdk_log.log
-resource_path = /home/juliocesar/WORK/inversion_cooperacion/docs/Proyectos/DepenCare/XML-SEPE/python/packages/adapters/configuration/sdk
-xml_path = /home/juliocesar/WORK/inversion_cooperacion/docs/Proyectos/DepenCare/XML-SEPE/python/packages/adapters/configuration/XMLs
-
+base_path = /home/juliocesar/0PROJECTS/depencare/depencare-xml
+token_persistence_path = ${base_path}/packages/adapters/configuration/sdk/python_sdk_tokens.txt
+log_file_path = ${base_path}/packages/adapters/configuration/sdk/logs/python_sdk_log.log
+resource_path = ${base_path}/packages/adapters/configuration/sdk
+xml_path = ${base_path}/packages/adapters/configuration/XMLs
 [creator]
 refresh_token = 
 access_token = 
